@@ -1,0 +1,14 @@
+use project3;
+show tables;
+select * from project3_order;
+select count(*) from project3_order;
+select count(*) AS TotalOrders from project3_order;
+select sum(TotalPrice) AS TotalRevenue from project3_order;
+select avg(TotalPrice) AS AverageOrdrValue from project3_order;
+select PaymentMethod , count(*) AS Orders  from project3_order GROUP BY PaymentMethod;
+Select OrderStatus, count(*) AS Orders from project3_order group by OrderStatus;
+Select Product, sum(TotalPrice) AS Revenue from project3_order group by Product ORDER BY Revenue DESC;
+SELECT ReferralSource , COUNT(*) AS Orders from project3_order group by ReferralSource;
+select * from project3_order order by TotalPrice desc;
+select * from project3_order where OrderStatus='Delivered';
+SELECT Product,AVG(Quantity) AS AvgQuanitity from project3_order group by Product;
